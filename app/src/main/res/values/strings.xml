@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Students App</string>
+    <string name="profile_image_description">Profile image</string>
+    <string name="add_student">+</string>
+    <string name="edit_student">Edit</string>
+    <string name="cancel_action">Cancel</string>
+    <string name="save_action">Save</string>
+    <string name="delete_action">Delete</string>
+    <string name="name_tag">Name:</string>
+    <string name="id_tag">Id:</string>
+    <string name="phone_tag">Phone:</string>
+    <string name="address_tag">Address:</string>
+    <string name="checked_status_tag">Checked</string>
+    <string name="no_students_message">No students to show</string>
+</resources>
