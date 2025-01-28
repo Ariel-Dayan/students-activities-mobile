@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditStudentActivity">
+
+    <ImageView
+        android:id="@+id/ivEditStudentProfileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/profile_image_description"
+        app:layout_constraintBottom_toTopOf="@+id/tvEditStudentNameTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/btnEditStudentSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/save_action"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnEditStudentDelete"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnEditStudentCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/cancel_action"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnEditStudentDelete"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnEditStudentDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/delete_action"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnEditStudentSave"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnEditStudentCancel"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvEditStudentNameTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:labelFor="@id/etEditStudentName"
+        android:text="@string/name_tag"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvEditStudentIdTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivEditStudentProfileImage" />
+
+    <TextView
+        android:id="@+id/tvEditStudentIdTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:labelFor="@id/etEditStudentId"
+        android:text="@string/id_tag"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvEditStudentPhoneTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditStudentNameTag" />
+
+    <TextView
+        android:id="@+id/tvEditStudentPhoneTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:labelFor="@id/etEditStudentPhone"
+        android:text="@string/phone_tag"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvEditStudentAddressTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditStudentIdTag" />
+
+    <TextView
+        android:id="@+id/tvEditStudentAddressTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:labelFor="@id/etEditStudentAddress"
+        android:text="@string/address_tag"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cbEditStudentCheckStatusTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditStudentPhoneTag" />
+
+    <CheckBox
+        android:id="@+id/cbEditStudentCheckStatusTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="50dp"
+        android:minHeight="48dp"
+        android:text="@string/checked_status_tag"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnEditStudentCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditStudentAddressTag" />
+
+    <EditText
+        android:id="@+id/etEditStudentName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:autofillHints="@string/name_tag"
+        android:ems="10"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvEditStudentNameTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvEditStudentNameTag"
+        app:layout_constraintWidth_max="488dp" />
+
+    <EditText
+        android:id="@+id/etEditStudentId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:autofillHints="@string/id_tag"
+        android:digits="0123456789"
+        android:ems="10"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvEditStudentIdTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvEditStudentIdTag"
+        app:layout_constraintWidth_max="488dp" />
+
+    <EditText
+        android:id="@+id/etEditStudentPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:autofillHints="@string/phone_tag"
+        android:ems="10"
+        android:inputType="phone"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvEditStudentPhoneTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvEditStudentPhoneTag"
+        app:layout_constraintWidth_max="488dp" />
+
+    <EditText
+        android:id="@+id/etEditStudentAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:autofillHints="@string/address_tag"
+        android:ems="10"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvEditStudentAddressTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvEditStudentAddressTag"
+        app:layout_constraintWidth_max="488dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
