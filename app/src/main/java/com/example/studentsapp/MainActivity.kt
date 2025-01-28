@@ -1,6 +1,7 @@
 package com.example.studentsapp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import com.example.studentsapp.adapter.StudentsRecyclerAdapter
 import android.os.Bundle
 import android.widget.Button
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         adapter = StudentsRecyclerAdapter(students)
         adapter?.listener = object : OnItemClickListener {
             override fun onItemClick(student: Student?) {
-         
+          
             }
         }
 
@@ -62,7 +63,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onAddStudentButtonClick() {
-   
+        val intent = Intent(this, AddStudentActivity::class.java)
+        startActivity(intent)
     }
 
     @SuppressLint("NotifyDataSetChanged")
