@@ -38,7 +38,11 @@ class StudentDetailsActivity : AppCompatActivity() {
     }
 
     private fun onEditStudentButtonClick() {
- 
+        val intent = Intent(this, EditStudentActivity::class.java)
+
+        intent.putExtra(Model.instance.studentIdParam, student?.id)
+        startActivity(intent)
+        finish()
     }
 
     private fun initData() {
