@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStudentActivity">
+
+    <ImageView
+        android:id="@+id/ivAddStudentProfileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/profile_image_description"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddStudentNameTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avatar"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/btnAddStudentSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/save_action"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAddStudentCancel"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnAddStudentCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/cancel_action"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddStudentSave"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvAddStudentNameTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:labelFor="@id/etAddStudentName"
+        android:text="@string/name_tag"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddStudentIdTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAddStudentProfileImage" />
+
+    <TextView
+        android:id="@+id/tvAddStudentIdTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:labelFor="@id/etAddStudentId"
+        android:text="@string/id_tag"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddStudentPhoneTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddStudentNameTag" />
+
+    <TextView
+        android:id="@+id/tvAddStudentPhoneTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:labelFor="@id/etAddStudentPhone"
+        android:text="@string/phone_tag"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddStudentAddressTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddStudentIdTag" />
+
+    <TextView
+        android:id="@+id/tvAddStudentAddressTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:labelFor="@id/etAddStudentAddress"
+        android:text="@string/address_tag"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cbAddStudentCheckStatusTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddStudentPhoneTag" />
+
+    <CheckBox
+        android:id="@+id/cbAddStudentCheckStatusTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="50dp"
+        android:minHeight="48dp"
+        android:text="@string/checked_status_tag"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddStudentCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddStudentAddressTag" />
+
+    <EditText
+        android:id="@+id/etAddStudentName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:autofillHints="@string/name_tag"
+        android:ems="10"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAddStudentNameTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAddStudentNameTag"
+        app:layout_constraintWidth_max="488dp" />
+
+    <EditText
+        android:id="@+id/etAddStudentId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:autofillHints="@string/id_tag"
+        android:digits="0123456789"
+        android:ems="10"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAddStudentIdTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAddStudentIdTag"
+        app:layout_constraintWidth_max="488dp" />
+
+    <EditText
+        android:id="@+id/etAddStudentPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:autofillHints="@string/phone_tag"
+        android:ems="10"
+        android:inputType="phone"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAddStudentPhoneTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvAddStudentPhoneTag"
+        app:layout_constraintWidth_max="488dp" />
+
+    <EditText
+        android:id="@+id/etAddStudentAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:autofillHints="@string/address_tag"
+        android:ems="10"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAddStudentAddressTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAddStudentAddressTag"
+        app:layout_constraintWidth_max="488dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
