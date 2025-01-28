@@ -2,6 +2,7 @@ package com.example.studentsapp.model
 
 class Model private constructor() {
     val students: MutableList<Student> = ArrayList()
+    val studentIdParam = "student_id"
 
     companion object {
         val instance: Model = Model()

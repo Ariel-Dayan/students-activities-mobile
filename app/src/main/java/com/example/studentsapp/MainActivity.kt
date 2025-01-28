@@ -50,7 +50,9 @@ class MainActivity : AppCompatActivity() {
         adapter = StudentsRecyclerAdapter(students)
         adapter?.listener = object : OnItemClickListener {
             override fun onItemClick(student: Student?) {
-          
+                val intent = Intent(this@MainActivity, StudentDetailsActivity::class.java)
+                intent.putExtra(Model.instance.studentIdParam, student?.id)
+                startActivity(intent)            
             }
         }
 
